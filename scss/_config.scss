@@ -29,6 +29,15 @@ $bg-opacity: 0.5;
   }
 }
 
+// Set Text Color(can be useful to learn)
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 // Responsive design
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
