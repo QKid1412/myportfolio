@@ -30,3 +30,22 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+var cycle = 0;
+var allImg = [
+  "../dist/img/bg1.jpg",
+  "../dist/img/bg2.jpg",
+  "../dist/img/bg3.jpg",
+  "../dist/img/bg4.jpg",
+  "../dist/img/bg5.jpg"
+];
+
+/*setInterval(function() {
+  if (cycle < 5) {
+    document.body.style.backgroundImage =
+      "url('" + allImg[cycle] + "')";
+    cycle += 1;
+  } else {
+    cycle = 0;
+  }
+}, 5000);*/
