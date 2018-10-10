@@ -11,5 +11,5 @@
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "author": "A.K.",
-  "license": "MIT"
+  "license": ""
 }

@@ -1,7 +1,8 @@
-$primary-color: #465c88;
-$secondary-color: #d7dd35;
+$primary-color: #00303f;
+$secondary-color: #dcae1d;
 $show-home-image: true;
 $home-image: url(../img/bg2.jpg);
+$about-image: url(../img/aboutbg.jpg);
 $bg-opacity: 0.5;
 
 @mixin easeOut {
@@ -26,10 +27,27 @@ $bg-opacity: 0.5;
         background: rgba($primary-color, $bg-opacity);
       }
     }
+
+    &.about-body {
+      //background: $about-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $bg-opacity);
+      }
+    }
   }
 }
 
-// Set Text Color(can be useful to learn)
+// Set Text Color
 @function set-text-color($color) {
   @if (lightness($color) > 70) {
     @return #000;
