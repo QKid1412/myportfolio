@@ -230,6 +230,7 @@ main {
   }
 
   .job-3 {
+    text-align: left;
     grid-area: job3;
   }
 
@@ -248,14 +249,47 @@ main {
 
   img {
     width: 100%;
-
+    height: auto;
     border: 3px #fff solid;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.3;
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+  // Overlay Text for project images
+  .container {
+    position: relative;
+    width: 100%;
+  }
+
+  .container .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    transition: 0.5s ease;
+  }
+  .container .overlay .wrappedtext {
+    color: rgb(245, 236, 236); //lighten($secondary-color, 15);
+    font-size: 20px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: left;
+  }
+  .container:hover .overlay {
+    display: block;
+  }
+  .container:hover .image {
+    opacity: 0.45;
+    border-color: $secondary-color;
+    @include easeOut;
   }
 }
 
@@ -297,12 +331,16 @@ main {
 }
 .btn-light {
   @extend .btn;
-  background: lighten($primary-color, 50);
-  color: #333;
+
+  background: lighten($primary-color, 10);
+  color: #fff;
 
   &:hover {
-    background: lighten(#000, 70);
-    color: set-text-color($secondary-color);
+    @include easeOut;
+    //border: 5px solid darken($secondary-color, 10);
+    //padding: 0.2rem 1rem;
+    background: lighten($primary-color, 15);
+    color: set-text-color($primary-color);
   }
 }
 

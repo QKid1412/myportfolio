@@ -100,7 +100,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/bg2.jpg);
+    background: url(../img/bg1.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -288,6 +288,7 @@ main {
       font-weight: 500;
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2); }
   .about-info .job-3 {
+    text-align: left;
     grid-area: job3; }
   .about-info .job {
     background: #004359;
@@ -300,11 +301,38 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
+    height: auto;
     border: 3px #fff solid; }
     .projects img:hover {
-      opacity: 0.5;
+      opacity: 0.3;
       border-color: #dcae1d;
       transition: all 0.5s ease-out; }
+  .projects .container {
+    position: relative;
+    width: 100%; }
+  .projects .container .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    transition: 0.5s ease; }
+  .projects .container .overlay .wrappedtext {
+    color: #f5ecec;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: left; }
+  .projects .container:hover .overlay {
+    display: block; }
+  .projects .container:hover .image {
+    opacity: 0.45;
+    border-color: #dcae1d;
+    transition: all 0.5s ease-out; }
 
 .boxes {
   display: flex;
@@ -336,10 +364,11 @@ main {
   }*/ }
 
 .btn-light {
-  background: #3fd1ff;
-  color: #333; }
+  background: #005772;
+  color: #fff; }
   .btn-light:hover {
-    background: #b3b3b3;
+    transition: all 0.5s ease-out;
+    background: #006a8c;
     color: #fff; }
 
 #main-footer {
@@ -355,6 +384,12 @@ main {
   .bio-text {
     font-size: 18px;
     font-weight: 400; } }
+
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
+    .projects .overlay {
+      overflow: hidden; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -385,11 +420,17 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+    .projects .overlay {
+      overflow: hidden; }
+    .projects .wrappedtext {
+      font-size: 12px; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
     font-size: 4rem; }
   .projects {
-    grid-template-columns: repeat(1, 1fr); } }
+    grid-template-columns: repeat(1, 1fr); }
+    .projects .wrappedtext {
+      font-size: 16px; } }
