@@ -10,8 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive",
-    "deploy": "gh-pages -d dist"
+    "sass": "node-sass -w scss/ -o css/ --recursive"
   },
   "author": "A.K.",
   "license": ""
