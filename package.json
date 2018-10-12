@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://QKid1412.github.io/portfolio",
+  "homepage": "https://QKid1412.github.io/myportfolio",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.9.3"
