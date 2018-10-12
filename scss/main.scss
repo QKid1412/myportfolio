@@ -232,6 +232,22 @@ main {
   .job-3 {
     text-align: left;
     grid-area: job3;
+
+    p {
+      margin-top: 5px;
+    }
+
+    li {
+      font-size: 15px;
+      color: #d8d1d1;
+    }
+
+    .link-in-job3 {
+      color: $secondary-color;
+      font-size: 18px;
+      font-weight: 500;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    }
   }
 
   .job {
@@ -344,6 +360,28 @@ main {
   }
 }
 
+#myCanvas {
+  /*display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-image: url("http://arima.bg/game/game.jpg");
+  
+  border-radius: 10px;
+  border-bottom: 35px solid #c2aa83;
+  box-shadow: 3px 3px 0px #888888;
+  padding-top: 25px;
+  overflow: hidden;*/
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+#contact:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 #main-footer {
   //position: fixed;
   bottom: 0;

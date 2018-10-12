@@ -290,6 +290,16 @@ main {
   .about-info .job-3 {
     text-align: left;
     grid-area: job3; }
+    .about-info .job-3 p {
+      margin-top: 5px; }
+    .about-info .job-3 li {
+      font-size: 15px;
+      color: #d8d1d1; }
+    .about-info .job-3 .link-in-job3 {
+      color: #dcae1d;
+      font-size: 18px;
+      font-weight: 500;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2); }
   .about-info .job {
     background: #004359;
     padding: 0.5rem;
@@ -370,6 +380,27 @@ main {
     transition: all 0.5s ease-out;
     background: #006a8c;
     color: #fff; }
+
+#myCanvas {
+  /*display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-image: url("http://arima.bg/game/game.jpg");
+  
+  border-radius: 10px;
+  border-bottom: 35px solid #c2aa83;
+  box-shadow: 3px 3px 0px #888888;
+  padding-top: 25px;
+  overflow: hidden;*/ }
+
+.column {
+  float: left;
+  width: 50%; }
+
+#contact:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 #main-footer {
   bottom: 0;
