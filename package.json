@@ -6,7 +6,7 @@
   "homepage": "https://QKid1412.github.io/myportfolio",
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "node-sass": "^4.9.3"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {},
   "scripts": {
